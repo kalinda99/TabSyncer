@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name":"TabSyncer",
+  "version":"1.0",
+  "description":"Firefox and Chromium-based extension to sync open tabs across different browsers via cloud storage on desktop and Android.",
+  "background": {
+	  "scripts": ["js/background.js"]
+  },
+  "icons": {
+    "48": "img/logo.svg",
+    "96": "img/logo.svg",
+    "128": "img/logo.svg"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabsyncer@andontie.net",
+      "strict_min_version": "57.0"
+    }
+  },
+
+  "browser_action": {
+    "default_icon":"img/logo.svg",
+    "default_title":"TabSyncer",
+    "default_popup":"popup.html"
+  },
+  
+  "permissions": [
+    "identity",
+    "tabs",
+    "storage"
+  ]
+}

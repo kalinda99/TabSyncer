@@ -1,0 +1,82 @@
+<html>
+  <head>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/material.min.js"></script>
+    <script src="js/popup.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h3>T a b S y n c e r</h3>
+      </div>
+
+      <div id="tab-list" class="active">
+        <h4>Synced Tabs:</h4>
+        <p id="status">No tabs here, sorry :(</p>
+        <p class="tabs"></p>
+      </div>
+
+      <div id="settings" class="hidden">
+        <h4>Settings:</h4>
+        <div class="theme_option">
+          <label for="theme" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+            <input type="checkbox" class="mdl-switch__input" id="theme">
+            <span class="mdl-switch__label">Dark Theme</span>
+          </label>
+        </div>
+        <p></p>
+        <div>
+          <label for="sync_name">Sync Name:</label> <input type="text" id="sync_name" value="">
+        </div>
+        <p></p>
+        <div class="sync">
+          <p>Sync Frequency: <select name="sync_times" id="syncfreq">
+            <option value="none">Manual Only</option>
+            <option value="open">On Browser Open</option>
+            <option value="5m">5 Minutes</option>
+            <option value="15m">15 Minutes</option>
+            <option value="30m">30 Minutes</option>
+            <option value="1h">1 Hour</option>
+            <option value="3h">3 Hours</option>
+            <option value="6hr">6 Hours</option>
+            <option value="12hr">12 Hours</option>
+            <option value="24hr">24 Hours</option>
+          </select>
+        </div>
+        <div class="accounts">
+          <p class="title">Accounts:</p>
+          <p>Cloud Account: <select name="accounts" id="oauth_list">
+            <option value="google">Google Drive</option>
+            <option value="nextcloud">Nextcloud/OwnCloud</option>
+            <option value="dropbox">Dropbox</option>
+            <option value="onedrive">OneDrive</option>
+          </select>
+          <div class="status">No account linked, please link one to enable sync.</div>
+        </div>
+        <p></p>
+        <div class="imex">
+          <p class="title">Import/Export:</p>
+          <p>Import and export tab lists will go here. TODO.</p>
+        </div>
+      </div>
+
+      <div id="links">
+        <div class="buttons current" id="open-tabs">
+          <i class="material-icons">tab</i>
+          <br>Open Tabs
+        </div>
+        <div class="buttons" id="syncnow">
+          <i class="material-icons">sync</i>
+          <br>Sync Now
+        </div>
+        <div class="buttons" id="settings-link">
+          <i class="material-icons">settings</i>
+          <br>Settings
+        </div>
+      </div>      
+    </div>
+  </body>
+</html>

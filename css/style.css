@@ -1,0 +1,137 @@
+body {
+	font: normal 100% Verdana, Helvetica, sans-serif;
+  color: #000;
+  margin: 0;
+	width: 100%;
+}
+body.dark {
+	background-color: #1b1b1b;
+	color: #DED9D9;
+}
+h3 {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.material-icons { 
+  font-size: 48px; 
+}
+
+#container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #eeeeee;
+  width: 360px;
+}
+
+.dark #container {
+  background-color: #121212;
+  color: #d6d1d1;
+  border-color: #D6D1D1;
+}
+
+#header {
+  flex: 0 1 auto;
+  background-color: #ec407a;
+  text-decoration: none;
+}
+
+.dark #header {
+  background-color: #b0003a;
+}
+
+#links {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ec407a;
+}
+.dark #links {
+  background-color: #b0003a;
+}
+
+.buttons {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+}
+.buttons:hover {
+  background-color: #ff77a9;
+  cursor: pointer;
+}
+.dark .buttons:hover {
+  background-color: #ec407a;
+}
+.current {
+  color: #002171;
+  border-bottom: #eeeeee 5px solid;  
+}
+.dark .current {
+  color: #77b6d8;
+}
+.active {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+
+#tab-list, #settings {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#tab-list {  
+  /* Flex-grow is first number to make this box fill the whole container until it hits the links box */
+  flex: 1 1 auto;
+  visibility: visible;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.0rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.option {
+  margin: 0;
+}
+
+#tab-list .tabs {
+  padding: 0;
+  list-style-type: none;
+}
+#tab-list #status {
+  align-self: center;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#settings {
+  /* Flex-grow is first number to make this box fill the whole container until it hits the links box */
+  flex: 1 1 auto;
+  padding: 10px;
+  align-items: flex-start;
+}
